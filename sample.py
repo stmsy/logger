@@ -22,7 +22,7 @@ if __name__ == '__main__':
     dictConfig(config)
     logger = logging.getLogger('sample_logger')
 
-    # Log message with level
+    # Log messages with several levels
     logger.log(20, "info")
     logger.log(30, "warning")
     logger.log(100, "test")
