@@ -12,12 +12,12 @@ config = {
     },
     'handlers': {
         'streamHandler': {
-            'level': 'DEBUG',
+            'level': 'ERROR',
             'formatter': 'simpleFormatter',
             'class': 'logging.StreamHandler',
         },
         'fileHandler': {
-            'level': 'INFO',
+            'level': 'ERROR',
             'formatter': 'simpleFormatter',
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': '',
@@ -29,7 +29,7 @@ config = {
     'loggers': {
         '': {
             'handlers': ['streamHandler', 'fileHandler'],
-            'level': "DEBUG",
+            'level': 'ERROR',
         }
     }
 }
