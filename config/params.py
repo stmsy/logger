@@ -22,7 +22,7 @@ config = {
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': '',
             'maxBytes': 1024,
-            'backupCount': 3,
+            'backupCount': 5,
             'encoding': 'utf-8',
         }
     },
