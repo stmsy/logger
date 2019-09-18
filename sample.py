@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     # Create filepath for log output
     today = str(date.today())
-    filepath = str(LOG_DIR.joinpath(f'{today}.log'))
+    filepath = LOG_DIR.joinpath(f'{today}.log')
     config['handlers']['fileHandler']['filename'] = filepath
 
     # Set logger with specified config
