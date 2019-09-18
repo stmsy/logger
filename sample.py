@@ -5,7 +5,8 @@ import logging
 from logging.config import dictConfig
 
 from config.params import config
-from settings import LOG_DIR
+from settings import LOG_DIR, LOGGER_NAME
+from utils import add
 
 
 if __name__ == '__main__':
@@ -20,11 +21,16 @@ if __name__ == '__main__':
 
     # Set logger with specified config
     dictConfig(config)
-    logger = logging.getLogger('sample_logger')
+    logger = logging.getLogger(LOGGER_NAME)
 
     # Log messages with several levels
     logger.log(20, "info")
     logger.log(30, "warning")
-    logger.log(100, "test")
+    logger.log(50, "critical")
     logger.info("info")
     logger.warning("warning")
+    logger.critical("critical")
+
+    # Log messages from another module
+    add(1, 2)
+    add(1.0, 2)
