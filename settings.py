@@ -8,4 +8,4 @@ CONFIG_DIR = PWD.joinpath('config')
 
 LOGGER_NAME = 'sampleLogger'
 
-TYPE_ERROR_MESSAGE = "both arguments must be integers"
+TYPE_ERROR_MESSAGE = "both args must be integers"
