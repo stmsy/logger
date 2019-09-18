@@ -5,7 +5,7 @@ import logging
 from logging.config import dictConfig
 
 from config.params import config
-from settings import CONFIG_DIR, LOG_DIR
+from settings import LOG_DIR
 
 
 if __name__ == '__main__':
