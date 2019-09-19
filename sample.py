@@ -3,7 +3,6 @@
 from add import add
 from mult import mult
 from logger import logger
-from settings import LOG_DIR
 from sub import sub
 
 
