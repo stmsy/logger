@@ -14,4 +14,5 @@ def are_int(num1: int, num2: int) -> bool:
         logger.debug("both args are integer")
         return True
     else:
+        logger.debug("at least one of args is not integer")
         return False
