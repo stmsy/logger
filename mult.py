@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from logger import logger
 from settings import TYPE_ERROR_MESSAGE
 from utils import are_int

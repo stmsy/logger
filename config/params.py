@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 FORMAT = '%(asctime)s:%(lineno)d:%(levelname)s:%(module)s:%(name)s:%(message)s'
 
 config = {
