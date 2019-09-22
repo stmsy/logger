@@ -1,4 +1,11 @@
-FORMAT = '%(asctime)s:%(lineno)d:%(levelname)s:%(module)s:%(name)s:%(message)s'
+# Set DEBUG True for for developers/maintainers
+DEBUG = True
+
+FORMAT = '%(asctime)s - %(lineno)d - %(levelname)s - %(module)s - %(message)s'
+if DEBUG:
+    LEVEL = 10
+else:
+    LEVEL = 20
 
 config = {
     'version': 1,
