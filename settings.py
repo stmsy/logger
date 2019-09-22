@@ -7,7 +7,7 @@ CONFIG_DIR = PWD.joinpath('config')
 
 LEVELS = {
     0: logging.NOTSET, 1: logging.DEBUG, 2: logging.INFO,
-    3: logging.WARNING, 4: loggig.ERROR, 5: logging.CRITICAL
+    3: logging.WARNING, 4: logging.ERROR, 5: logging.CRITICAL
 }
 
 LOGGER_NAME = 'sampleLogger'
