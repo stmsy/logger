@@ -1,4 +1,4 @@
-from logger import logger
+from logging import Logger
 
 
 def _is_int(num: int) -> bool:
@@ -6,11 +6,11 @@ def _is_int(num: int) -> bool:
     return isinstance(num, int)
 
 
-def are_int(num1: int, num2: int) -> bool:
+def are_int(num1: int, num2: int, logger: Logger) -> bool:
     """Check whether the numbers are both integers."""
     if _is_int(num1) and _is_int(num2):
         logger.debug("both args are integer")
         return True
     else:
-        logger.debug("at least one of args is not integer")
+        logger.error("both args must be integers")
         return False
