@@ -15,5 +15,4 @@ def add(num1: int, num2: int, verbosity: int = 4) -> int:
     if are_int(num1, num2, logger):
         return num1 + num2
     else:
-        logger.error(TYPE_ERROR_MESSAGE)
         raise TypeError(TYPE_ERROR_MESSAGE)
