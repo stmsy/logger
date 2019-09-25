@@ -1,5 +1,5 @@
 # Set DEBUG True for for developers/maintainers
-DEBUG = False
+DEBUG = True
 
 FORMAT = '%(asctime)s - %(lineno)d - %(levelname)s - %(module)s - %(message)s'
 if DEBUG:
