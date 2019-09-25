@@ -3,9 +3,9 @@ DEBUG = False
 
 FORMAT = '%(asctime)s - %(lineno)d - %(levelname)s - %(module)s - %(message)s'
 if DEBUG:
-    LEVEL = 10
+    LEVEL = 'DEBUG'
 else:
-    LEVEL = 20
+    LEVEL = 'NOTSET'
 
 config = {
     'version': 1,
