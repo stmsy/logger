@@ -1,7 +1,9 @@
-# Set DEBUG True for for developers/maintainers
+# Set DEBUG True for developers/maintainers
 DEBUG = False
 
-FORMAT = '%(asctime)s - %(lineno)d - %(levelname)s - %(module)s - %(message)s'
+LOGGER_NAME = 'sampleLogger'
+FORMAT = ('%(asctime)s - %(levelname)s - %(module)s - %(funcName)s - '
+          '%(lineno)d - %(message)s')
 if DEBUG:
     LEVEL = 'DEBUG'
 else:
@@ -32,7 +34,7 @@ config = {
         }
     },
     'loggers': {
-        '': {
+        LOGGER_NAME: {
             'handlers': ['streamHandler', 'fileHandler'],
             'level': LEVEL,
         }

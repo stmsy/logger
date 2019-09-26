@@ -1,7 +1,7 @@
 from datetime import date
 from logging import Logger
 
-from config.params import config, DEBUG
+from params import config, DEBUG
 from settings import LEVELS, LOG_DIR
 
 # Create 'logs' directory if necessary
