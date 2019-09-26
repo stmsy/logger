@@ -1,8 +1,7 @@
-from settings import LOGGER_NAME
-
 # Set DEBUG True for developers/maintainers
 DEBUG = False
 
+LOGGER_NAME = 'sampleLogger'
 FORMAT = ('%(asctime)s - %(levelname)s - %(module)s - %(funcName)s - '
           '%(lineno)d - %(message)s')
 if DEBUG:
