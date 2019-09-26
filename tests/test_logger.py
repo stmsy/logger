@@ -1,4 +1,4 @@
-from ..config.params import DEBUG
+from ..params import DEBUG
 
 
 def test_debug() -> None:

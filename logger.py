@@ -1,10 +1,8 @@
 from datetime import date
-import logging
-from logging.config import dictConfig
+from logging import Logger
 
-from config.params import config
-from settings import LOG_DIR, LOGGER_NAME
-
+from params import config, DEBUG
+from settings import LEVELS, LOG_DIR
 
 # Create 'logs' directory if necessary
 if not LOG_DIR.exists():
@@ -15,6 +13,21 @@ today = str(date.today())
 filepath = LOG_DIR.joinpath(f'{today}.log')
 config['handlers']['fileHandler']['filename'] = filepath
 
-# Set logger with specified config
-dictConfig(config)
-logger = logging.getLogger(LOGGER_NAME)
+
+def is_verbosity_valid(verbosity: int) -> bool:
+    """Check whether verbosity is set properly."""
+    if verbosity not in (0, 1, 2, 3, 4, 5):
+        return False
+    if DEBUG:
+        if verbosity == 0:
+            return False
+    return True
+
+
+def set_level(verbosity: int, logger: Logger) -> None:
+    """Set the specified log lelvel if valid."""
+    if is_verbosity_valid(verbosity):
+        level = LEVELS[verbosity]
+        logger.setLevel(level)
+    else:
+        raise ValueError("verbosity must be set properly")
