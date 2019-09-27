@@ -9,7 +9,7 @@ dictConfig(config)
 logger = logging.getLogger(LOGGER_NAME)
 
 
-def mult(num1: int, num2: int, verbosity: int = 4) -> int:
+def mult(num1: int, num2: int, verbosity: int = 2) -> int:
     """Multiply one number by another if they both are integers."""
     set_level(verbosity, logger)
     if are_int(num1, num2, logger):

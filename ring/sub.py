@@ -9,7 +9,7 @@ dictConfig(config)
 logger = logging.getLogger(LOGGER_NAME)
 
 
-def sub(num1: int, num2: int, verbosity: int = 4) -> int:
+def sub(num1: int, num2: int, verbosity: int = 2) -> int:
     """Subtract one number from another if they both are integers."""
     set_level(verbosity, logger)
     if are_int(num1, num2, logger):

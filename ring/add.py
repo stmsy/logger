@@ -9,7 +9,7 @@ dictConfig(config)
 logger = getLogger(LOGGER_NAME)
 
 
-def add(num1: int, num2: int, verbosity: int = 4) -> int:
+def add(num1: int, num2: int, verbosity: int = 2) -> int:
     """Add two numbers if they both are integers."""
     set_level(verbosity, logger)
     if are_int(num1, num2, logger):
